@@ -1,4 +1,4 @@
-# 🌐 CF-Workers-CheckProxyIP
+# 🌐 ProxyIP
 ![CF-Workers-CheckProxyIP](./demo.png)
 > 基于 Cloudflare Workers 的高性能 ProxyIP 验证服务
 
@@ -8,7 +8,7 @@
 
 ## 📖 项目简介
 
-CF-Workers-CheckProxyIP 是一个部署在 Cloudflare Workers 上的轻量级 ProxyIP 验证工具。它能够快速、准确地检测代理IP的可用性，帮助用户筛选出有效的代理服务器。
+ProxyIP 是一个部署在 Cloudflare Workers 上的轻量级 ProxyIP 验证工具。它能够快速、准确地检测代理IP的可用性，帮助用户筛选出有效的代理服务器。
 
 ### ✨ 主要特性
 
@@ -58,7 +58,7 @@ Cloudflare Workers → ProxyIP 服务器 → Cloudflare 服务
 
 ## 🚀 部署方式
 
-- **Workers** 部署：复制 [_worker.js](https://github.com/cmliu/CF-Workers-CheckProxyIP/blob/main/_worker.js) 代码，保存并部署即可
+- **Workers** 部署：复制 [_worker.js](https://github.com/89112317/ProxyIP/blob/main/_worker.js) 代码，保存并部署即可
 - **Pages** 部署：`Fork` 后 `连接GitHub` 一键部署即可
 
 ## 📝 使用方法
@@ -68,7 +68,7 @@ Cloudflare Workers → ProxyIP 服务器 → Cloudflare 服务
 直接访问你的 Worker 地址，使用友好的网页界面进行检测：
 
 ```
-https://check.proxyip.cmliussss.net
+https://iptest.891123.xyz
 ```
 
 ### API 接口
@@ -77,22 +77,22 @@ https://check.proxyip.cmliussss.net
 - `proxyip` 参数支持 IPv4、IPv6 地址和域名，端口号可选，不填默认为 443。
 ```bash
 # 检查带端口的 IP
-curl "https://check.proxyip.cmliussss.net/check?proxyip=1.2.3.4:443"
+curl "https://iptest.891123.xyz/check?proxyip=1.2.3.4:443"
 
 # 检查不带端口的 IP（默认使用443端口）
-curl "https://check.proxyip.cmliussss.net/check?proxyip=1.2.3.4"
+curl "https://iptest.891123.xyz/check?proxyip=1.2.3.4"
 
 # 检查 IPv6 地址
-curl "https://check.proxyip.cmliussss.net/check?proxyip=[2001:db8::1]:443"
+curl "https://iptest.891123.xyz/check?proxyip=[2001:db8::1]:443"
 
 # 检查域名
-curl "https://check.proxyip.cmliussss.net/check?proxyip=example.com:443"
+curl "https://iptest.891123.xyz/check?proxyip=example.com:443"
 ```
 
 - 设置 `TOKEN` 变量后，需要在路径中添加 `token=your-secret-token` 才能使用接口。
 
 ```bash
-curl "https://check.proxyip.cmliussss.net/check?proxyip=1.2.3.4:443&token=your-secret-token"
+curl "https://iptest.891123.xyz/check?proxyip=1.2.3.4:443&token=your-secret-token"
 ```
 
 #### 📄 响应格式
